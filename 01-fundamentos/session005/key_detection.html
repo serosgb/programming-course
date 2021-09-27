@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+	.container {
+	  display: flex;
+	  justify-content: center;
+	}
+	.child {
+		margin: 30px;
+	}
+  </style>
+</head>
+<body onkeydown="myfunction(event)">
+<!--
+  <div class="container">
+	<div class="child">
+		<img id="image" src="normal.png" />
+	</div>
+  </div>
+  
+-->
+  
+  <img id="image" src="normal.png" width="150"  />
+
+  <script language="javascript">
+    let mostrar = true;
+    
+    function myfunction(event) {
+
+	  let element = document.getElementById("image");
+	  
+	  //console.log(element);
+      
+      console.log(event.key + ", code: " + event.which);
+      
+      switch(event.key) {
+      
+        case "S":
+        case "s":
+          console.log("Salir del juego");
+		  confirm("Desea salir del juego?");
+          break;
+        case "J":
+        case "j":
+          console.log("Saltando");
+          break;
+        case "ArrowLeft":
+          console.log("A la izquierda");
+          break;
+        case "ArrowRight":
+          console.log("A la derecha");
+          break;
+        case "ArrowUp":
+          console.log("Subiendo");
+          break;
+        case "ArrowDown":
+          console.log("Agacharse");
+          break;
+        case "E":
+        case "e":
+          if (mostrar) {
+            console.log("Mostrar escudo");
+			element.src="escudo.png";
+            mostrar = false;
+          } else {
+            console.log("Ocultar escudo");
+			element.src="normal.png";
+            mostrar = true;
+          }
+          break;         
+      }
+      
+      
+    }
+    
+  </script>  
+  
+
+</body>
+<pre>
+* Si el usuario presiona S o s se debe imprimir en la pantalla "Salir del juego".
+
+* Si presiona la letra J o j se imprime en la consola "Saltando".
+
+* Si se presiona la tecla de flecha izquierda imprimir "A la izquierda".
+
+* Si se presiona la tecla de flecha derecha imprimir "A la derecha".
+
+* Si se presiona la tecla de flecha arriba imprimir "Subiendo".
+
+* Si se presiona la tecla de flecha abajo imprimir "Agacharse".
+
+* Si se presiona la letra E imprimir "Mostrar escudo", si se presiona nuevamente  imprimir "Ocultar Escudo".
+</pre>

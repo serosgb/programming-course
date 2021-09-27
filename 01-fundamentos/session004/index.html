@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title>Adivina el número</title>
+	<script language="javascript">
+	
+/*
+
+Adivina el numero del 1 al 10
+
+*/
+
+// Generar un numero del 1 al 10
+let geratedNumber = Math.floor(Math.random() * 10) + 1;
+
+console.log(geratedNumber);
+
+// Pedir al usuario que te diga un numero
+let guessedNumber = prompt("Dame un número del 1 al 10");
+
+console.log(guessedNumber);
+
+// Comparar el numero generado con el numero que suministro el usuario
+// Si son iguales vamos a imprimir "Felicidades acertaste!"
+// Si no son iguales se va imprimir "Fallasete!"
+if (geratedNumber == guessedNumber) {
+  alert("Felicidades acertaste!");
+} else {
+  alert("Fallasete! el número fue " + geratedNumber);
+}
+	
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
